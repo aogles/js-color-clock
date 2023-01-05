@@ -3,7 +3,7 @@
     "use strict";
 
 const $clockDisplay = document.querySelector(".clock-display"); //null
-const $clockprogressbar = document.querySelector(".clock-progress-bar"); //null +2overloads?
+const $clockProgressBar = document.querySelector(".clock-progress-bar"); //null +2overloads?
 //const $clockface = document.querySelector(".clock-face"); //parent node
 const $clock = document.querySelector(".clock"); 
 
@@ -19,6 +19,14 @@ $clockDisplay.addEventListener("mouseover", function (){
 
 $clockDisplay.addEventListener("mouseout", function() {
     isHovering = false;
+});
+
+$clockProgressBar.addEventListener("mouseout", function() {
+    isHovering = false;
+});
+
+$clockProgressBar.addEventListener("mouseover", function (){
+    isHovering = true;
 });
 
 setInterval(function () {
@@ -39,8 +47,8 @@ setInterval(function () {
 }
 
 
-$clockprogressbar.getElementsByClassName.width = `${(seconds/60) * 14}rem`;
-$clock.textContent = `${hour}:${minutes}:${seconds}`; 
+$clockProgressBar.getElementsByClassName.width = `${(seconds/60) * 14}rem`;
+$clockDisplay.textContent = `${hour}:${minutes}:${seconds}`; 
 
     }, 1000);
 
@@ -50,3 +58,12 @@ $clock.textContent = `${hour}:${minutes}:${seconds}`;
 /*  For the clock i was attempting to use the querySelector to link this JS to HTML but was unsuccessful.the 
 the clock display has not changed and gives an undefined ue to the value never being read, the function for currentTime r
 reads as 'void'. I also am having a hard time understanding how to use (inner/outer HTML) */ 
+setInterval(function(){
+        updateTime();
+    
+        $('body').css("background-color", $rgb );
+    
+      }, 1000);
+    
+
+ 
