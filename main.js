@@ -1,7 +1,9 @@
-const $timeclock = document.querySelectorAll('.clock-display'); 
-const $clockprogress = document.querySelectorAll('.clock-progress-bar');
-/*const $timeclock = document.querySelectorAll('.clock-face');
-const $timeclock = document.querySelectorAll('.clock'); */
+//clock
+const $clockDisplay = document.querySelectorAll(".clock-display"); 
+const $clockprogressbar = document.querySelectorAll(".clock-progress-bar");
+/*const $clockface = document.querySelectorAll(".clock-face");
+const $clock = document.querySelectorAll(".clock"); */
+
 const $inner = select.querySelectorAll('.outer .inner');
 
 
@@ -27,4 +29,24 @@ function currentTime() {
 }
 
 currentTime();
+
+//clock
+
+//timer bar
+
+function clockprogress() {
+    var clockProgressBar = document.querySelector(".clock-progress-bar") ;
+    var clockDisplay = document.querySelector(".clock-display") ;
+    var startTimer = setInterval(progressBar,10) ;
+    function progressBar(){
+        if(clockProgressBar.clientWidth < clockDisplay.clientWidth){
+            clockProgressBar.style.width = clockProgressBar.clientWidth + 1 + "px";
+        }
+    else{
+        clockProgressBar.style.width = clockDisplay.clientWidth + "px";
+        clearInterval(startTimer);
+    }
+    
+    }
+}
 
