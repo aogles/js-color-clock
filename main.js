@@ -70,7 +70,7 @@ $clockDisplay.textContent = `${hour}:${minutes}:${seconds}`;
 
   })(); 
 
-
+//what is the differenc between var color and var .color?
 
 
     
