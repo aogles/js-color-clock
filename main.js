@@ -55,22 +55,22 @@ $clockProgressBar.getElementsByClassName.width = `${(seconds/60) * 14}rem`;
 $clockDisplay.textContent = `${hour}:${minutes}:${seconds}`; 
 
     }, 1000);
-
+//color
     setInterval(function () {
         var currentTime = new Date()
-      var red = Math.floor( (Math.sin(+currentTime/10000)+1) * 155/2); 
+      var blue = Math.floor( (Math.sin(+currentTime/10000)+1) * 155/2); 
       //M.floor rounds down and returns the largest integer less than or equal to a given number.
       //M.sin returns the sine of a number in radians in this case the current time devided
-        var blue = Math.floor( (Math.sin(2 * (+currentTime/10000 + 40))+1) * 255/2);
+        var red = Math.floor( (Math.sin(2 * (+currentTime/10000 + 40))+1) * 255/2);
        // var green = Math.floor( (Math.sin(3 * (+currentTime/10000 + 170))+1) * 255/2);
      
-        var color = "rgba(" + red + "," + blue + ",255)"; // chnging the 255 changes to brighness of the colors and rate they change, 155 is painful to look at
+        var color = "rgba(" + red + "," + blue + ",255)"; // changing the 255 changes to brighness of the colors and rate they change, 155 is painful to look at
         $clock.style.background = color; 
      }, 100);
 
   })(); 
 
-//color
+
 
 
     
