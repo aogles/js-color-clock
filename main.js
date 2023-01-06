@@ -46,6 +46,8 @@ setInterval(function () {
     hour = ("0" + currentTime.getHours()).slice(-2);
 }
 
+$clockProgressBar.style.width = (seconds/60) * 100 + "%"
+
 
 $clockProgressBar.getElementsByClassName.width = `${(seconds/60) * 14}rem`;
 $clockDisplay.textContent = `${hour}:${minutes}:${seconds}`; 
@@ -58,12 +60,20 @@ $clockDisplay.textContent = `${hour}:${minutes}:${seconds}`;
 /*  For the clock i was attempting to use the querySelector to link this JS to HTML but was unsuccessful.the 
 the clock display has not changed and gives an undefined ue to the value never being read, the function for currentTime r
 reads as 'void'. I also am having a hard time understanding how to use (inner/outer HTML) */ 
-setInterval(function(){
-        updateTime();
-    
-        $('body').css("background-color", $rgb );
-    
-      }, 1000);
+
     
 
- 
+ /* (function () { 
+    var udata = [53];
+    if (udata >= 70) {
+      document.getElementById("centerbox1").style.backgroundColor = '#99C262';
+    }
+    else if (udata >= 51 && udata < 70)
+    {
+      document.getElementById("centerbox1").style.backgroundColor = '#F8D347';
+    }  
+    else if (udata <=50)  
+    {
+      document.getElementById("centerbox1").style.backgroundColor = '#FF6C60';
+    }
+  }) */
